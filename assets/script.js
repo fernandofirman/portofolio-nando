@@ -45,9 +45,28 @@ ScrollReveal().reveal('.home-content p, .about-content', { origin: 'right' });
 
 /*==================== typed js ====================*/
 const typed = new Typed('.multiple-text', {
-    strings: ['Software Engineer', 'Web Developer' ],
+    strings: ['Siswa Smk Krian 1 Sidoarjo', 'Siswa X RPL 1' ],
     typeSpeed: 100,
     backSpeed: 100,
     backDelay: 1000,
     loop: true
 });
+
+function openModal(title, imgSrc, description) {
+    document.getElementById('modalTitle').innerText = title;
+    document.getElementById('modalImg').src = imgSrc;
+    document.getElementById('modalDesc').innerText = description;
+    document.getElementById('projectModal').style.display = 'flex';
+}
+
+function closeModal() {
+    document.getElementById('projectModal').style.display = 'none';
+}
+
+// Menutup modal jika area luar diklik
+window.onclick = function(event) {
+    let modal = document.getElementById('projectModal');
+    if (event.target == modal) {
+        modal.style.display = 'none';
+    }
+}
