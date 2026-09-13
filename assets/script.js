@@ -1,4 +1,4 @@
-/*==================== toggle icon navbar ====================*/
+
 let menuIcon = document.querySelector('#menu-icon');
 let navbar = document.querySelector('.navbar');
 
@@ -7,7 +7,6 @@ menuIcon.onclick = () => {
     navbar.classList.toggle('active');
 };
 
-/*==================== scroll sections active link ====================*/
 let sections = document.querySelectorAll('section');
 let navLinks = document.querySelectorAll('header nav a');
 
@@ -26,12 +25,10 @@ window.onscroll = () => {
         };
     });
 
-    /*==================== remove toggle icon and navbar when click navbar link (scroll) ====================*/
     menuIcon.classList.remove('bx-x');
     navbar.classList.remove('active');
 };
 
-/*==================== scroll reveal ====================*/
 ScrollReveal({
     distance: '80px',
     duration: 2000,
@@ -43,7 +40,6 @@ ScrollReveal().reveal('.home-img, .services-container, .portfolio-box, .contact 
 ScrollReveal().reveal('.home-content h1, .about-img', { origin: 'left' });
 ScrollReveal().reveal('.home-content p, .about-content', { origin: 'right' });
 
-/*==================== typed js ====================*/
 const typed = new Typed('.multiple-text', {
     strings: ['Siswa Smk Krian 1 Sidoarjo', 'Siswa X RPL 1' ],
     typeSpeed: 100,
@@ -63,7 +59,6 @@ function closeModal() {
     document.getElementById('projectModal').style.display = 'none';
 }
 
-// Menutup modal jika area luar diklik
 window.onclick = function(event) {
     let modal = document.getElementById('projectModal');
     if (event.target == modal) {
